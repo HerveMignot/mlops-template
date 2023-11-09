@@ -1,14 +1,9 @@
-[![View on Medium](https://img.shields.io/badge/Medium-View%20on%20Medium-blue?logo=medium)](https://towardsdatascience.com/how-to-structure-a-data-science-project-for-readability-and-transparency-360c6716800)
-
 # Data Science Cookie Cutter
 
-## What is this?
-This repository is a template for a data science project. This is the project structure I frequently use for my data science project. 
-
 ## Tools used in this project
-* [hydra](https://hydra.cc/): Manage configuration files - [article](https://towardsdatascience.com/introduction-to-hydra-cc-a-powerful-framework-to-configure-your-data-science-projects-ed65713a53c6)
-* [pre-commit plugins](https://pre-commit.com/): Automate code reviewing formatting  - [article](https://towardsdatascience.com/4-pre-commit-plugins-to-automate-code-reviewing-and-formatting-in-python-c80c6d2e9f5?sk=2388804fb174d667ee5b680be22b8b1f)
-* [DVC](https://dvc.org/): Data version control - [article](https://towardsdatascience.com/introduction-to-dvc-data-version-control-tool-for-machine-learning-projects-7cb49c229fe0)
+* [hydra](https://hydra.cc/): Manage configuration files
+* [pre-commit plugins](https://pre-commit.com/): Automate code reviewing formatting
+* [DVC](https://dvc.org/): Data version control
 * [pdoc](https://github.com/pdoc3/pdoc): Automatically create an API documentation for your project
 
 ## Project Structure
@@ -57,8 +52,5 @@ pip install cookiecutter
 
 Create a project based on the template:
 ```bash
-cookiecutter https://github.com/khuyentran1401/data-science-template --checkout dvc-pip
+cookiecutter https://github.com/HerveMignot/mlops-template --checkout dvc-pip
 ```
-
-Find detailed explanation of this template [here](https://towardsdatascience.com/how-to-structure-a-data-science-project-for-readability-and-transparency-360c6716800).
-
