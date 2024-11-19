@@ -17,25 +17,18 @@ repos:
       args: [--maxkb=50000]
     - id: check-merge-conflict
     - id: pretty-format-json
+      args: [--autofix, --indent=4, --no-sort-keys]
     - id: requirements-txt-fixer
     - id: no-commit-to-branch
       args: [--branch, prod, --branch, staging]
 
-  - repo: https://github.com/psf/black
-    rev: 23.10.1
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.3.7
     hooks:
-    - id: black
-      exclude: ^ipynb
-
-  - repo: https://github.com/PyCQA/flake8
-    rev: 6.1.0
-    hooks:
-    -   id: flake8
-
-  - repo: https://github.com/timothycrosley/isort
-    rev: 5.12.0
-    hooks:
-    -   id: isort
+      - id: ruff
+        args: [--config, pyproject.toml]
+      - id: ruff-format
+        args: [--config, pyproject.toml]
 
   - repo: https://github.com/econchick/interrogate
     rev: 1.5.0
@@ -47,3 +40,21 @@ repos:
     rev: v1.6.1
     hooks:
     -   id: mypy
+
+  # For comparison / switch off ruff
+  #
+  # - repo: https://github.com/psf/black
+  #   rev: 23.10.1
+  #   hooks:
+  #   - id: black
+  #     exclude: ^ipynb
+
+  # - repo: https://github.com/PyCQA/flake8
+  #   rev: 6.1.0
+  #   hooks:
+  #   -   id: flake8
+
+  # - repo: https://github.com/timothycrosley/isort
+  #   rev: 5.12.0
+  #   hooks:
+  #   -   id: isort
