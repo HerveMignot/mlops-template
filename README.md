@@ -1,10 +1,14 @@
-# Data Science Cookie Cutter
+# Data Science & MLOps Cookie Cutter
+
 
 ## Tools used in this project
-* [hydra](https://hydra.cc/): Manage configuration files
+* [uv](https://docs.astral.sh/uv/): Manage installation and packages
 * [pre-commit plugins](https://pre-commit.com/): Automate code reviewing formatting
+* [ruff](https://docs.astral.sh/ruff/): Python code linting
+
+### Some other tools to consider
 * [DVC](https://dvc.org/): Data version control
-* [pdoc](https://github.com/pdoc3/pdoc): Automatically create an API documentation for your project
+
 
 ## Project Structure
 ```bash
@@ -20,8 +24,7 @@
 ├── data            
 │   ├── final                       # data after training the model
 │   ├── processed                   # data after processing
-│   ├── raw                         # raw data
-│   └── raw.dvc                     # DVC file of data/raw
+│   └── raw                         # raw data
 ├── docs                            # documentation for your project
 ├── dvc.yaml                        # DVC pipeline
 ├── .flake8                         # configuration for flake8 - a Python formatter tool
@@ -30,9 +33,10 @@
 ├── models                          # store models
 ├── notebooks                       # store notebooks
 ├── .pre-commit-config.yaml         # configurations for pre-commit
-├── pyproject.toml                  # Configure black
+├── pyproject.toml                  # include some configuration for black
 ├── requirements.txt                # requirements for pip
 ├── README.md                       # describe your project
+├── ruff.toml                       # Configure ruff (linting)
 ├── src                             # store source code
 │   ├── __init__.py                 # make src a Python module 
 │   ├── process.py                  # process data before training model
@@ -52,5 +56,5 @@ pip install cookiecutter
 
 Create a project based on the template:
 ```bash
-cookiecutter https://github.com/HerveMignot/mlops-template --checkout dvc-pip
+cookiecutter https://github.com/HerveMignot/mlops-template --checkout starter
 ```
